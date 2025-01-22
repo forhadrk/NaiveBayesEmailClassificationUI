@@ -6,6 +6,13 @@ import os
 MODEL_PATH = "naive_bayes_spam_model.joblib"
 VECTORIZER_PATH = "count_vectorizer.joblib"
 
+# Set the browser title and favicon
+st.set_page_config(
+    page_title="Naive Bayes Spam Email Detection App",  # Browser tab title
+    page_icon="📧",  # Favicon (emoji or path to an image file)
+    layout="centered",  # Layout can be "centered" or "wide"
+)
+
 # Function to load the model and vectorizer
 @st.cache_resource
 def load_model_and_vectorizer():
@@ -53,4 +60,4 @@ if st.button("Check Message"):
 
 # Footer with credits
 st.markdown("---")
-st.markdown("💡 Built with Streamlit | Naive Bayes Spam Detection App")
+st.markdown("💡 Built with Streamlit by Forhad Hossain | Naive Bayes Spam Detection App")
